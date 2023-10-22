@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"> <!-- Adicionado para suportar caracteres acentuados -->
+  <style>
+    body {
+      background-color: red;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #nao {
+      position: absolute;
+    }
+    h1 {
+      font-size: 24px;
+      color: white; /* Adicionando cor branca ao título para melhor visibilidade */
+    }
+  </style>
+</head>
+<body>
+  <h1>POSSO TE VER HOJE?</h1>
+  <button class="btn" id="sim" onclick="mostrarMensagem()">SIM</button>
+  <button class="btn" id="nao" onmouseover="moverBotao()">NÃO</button>
+
+  <script>
+    function mostrarMensagem() {
+      alert("EBAAAAA, TE AMO MUITOO");
+    }
+
+    function moverBotao() {
+      var botaoNao = document.getElementById("nao");
+      var novaPosicaoX = Math.floor(Math.random() * window.innerWidth);
+      var novaPosicaoY = Math.floor(Math.random() * window.innerHeight);
+
+      botaoNao.style.left = novaPosicaoX + "px";
+      botaoNao.style.top = novaPosicaoY + "px";
+    }
+  </script>
+</body>
+</html>
